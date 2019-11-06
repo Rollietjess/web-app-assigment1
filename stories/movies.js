@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import List from "../components/movies/list";
+import List from "../src/components/movies/list";
 const movieList = "List of movies";
 const movies = [
   {
