@@ -12,8 +12,8 @@ import MovieList from '../src/components/movieList/'
 
 const sample = {
   title: 'Twilight',
-  genre: 'Romance',
-  duration: 2,
+  vote_average: 8.6,
+  release_date: 2,
   picture: {thumbnail: './film-poster-placeholder.png'}
 }
 

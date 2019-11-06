@@ -8,10 +8,10 @@ class StubAPI {
     find(id) {
         let index = _.findIndex(
         this.movies,
-        contact => `${contact.phone}${contact.cell}` === id
+        movie => `${movie.id}` === id
         );
         if (index !== -1) {
-        return this.contacts[index];
+        return this.movies[index];
         }
         return null;
     }
@@ -29,11 +29,11 @@ class StubAPI {
         return this.movies;
     }
 
-    update(key, email, phone) {
-        let index = _.findIndex(this.contacts, contact => contact.phone === key);
+    update(key, release_date, vote_average) {
+        let index = _.findIndex(this.movies, movie => movie.id === key);
         if (index !== -1) {
-        this.contacts[index].phone = phone;
-        this.contacts[index].email = email;
+        this.movies[index].release_date = release_date;
+        this.movies[index].vote_average = vote_average;
         return true;
         }
         return false;
