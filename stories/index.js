@@ -11,6 +11,7 @@ import Movie from '../src/components/movie/'
 import MovieList from '../src/components/movieList/'
 import MovieInfo from '../src/components/moviePublic/publicInfo'
 import MovieInfoPrivate from '../src/components/moviePrivate/'
+import MovieInfoPublic from '../src/components/moviePublic/'
 
 
 
@@ -77,4 +78,12 @@ storiesOf("Movies List App/Movie Info/MovieInfo", module)
 storiesOf("Movies List App/Movie Info/Movie private", module)
 .add("default", () => ( 
    <MovieInfoPrivate movie={sample}/>
+));
+
+storiesOf("Movies List App/Movie Info/Movie public info", module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+))
+.add("default", () => ( 
+   <MovieInfoPublic movie={sample}/>
 ));
