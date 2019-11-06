@@ -6,6 +6,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import Header from '../src/components/header/'
 import FilterControls from '../src/components/filterControls/'
 import Movie from '../src/components/movie/'
+import MovieList from '../src/components/movieList/'
 
 
 
@@ -28,3 +29,8 @@ storiesOf("Movies List App/Filter Controls", module).add("default", () => (
 storiesOf("Movies List App/Movie", module).add("default", () => ( 
   <Movie movie={sample}/>
 ));    
+
+storiesOf("Movies List App/Movie List", module).add("default", () => { 
+  const samples = [sample, sample, sample, sample, sample]
+  return <MovieList movies={samples}/>
+});
