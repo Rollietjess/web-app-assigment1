@@ -13,8 +13,8 @@ export default class filterControls extends Component {
               <span> Genre: </span>
               <select id="genre">
                 <option value="all">All</option>
-                <option value="romance">Romance</option>
-                <option value="horro">Horror</option>
+                <option value="10749">Romance</option>
+                <option value="27">Horror</option>
               </select>
             </h4>
           </div>

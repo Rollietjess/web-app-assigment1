@@ -11,7 +11,7 @@ class Movie extends Component {
           <img
             className="card-img-tag center "
             alt={this.props.movie.title}
-            src={this.props.movie.picture.thumbnail}
+            src={'https://image.tmdb.org/t/p/w500/' + this.props.movie.poster_path}
           />
           <div className="card-body">
             <h5 className="card-title ">
@@ -19,7 +19,10 @@ class Movie extends Component {
             </h5>
             <p key="duration">
               <FontAwesomeIcon icon={["fa", "clock"]} />
-              <span> {this.props.movie.duration}</span>
+              <span> {this.props.movie.vote_average}</span>
+            </p>
+            <p key="releas_date">
+              <span> {this.props.movie.release_date}</span>
             </p>
           </div>
           <div className="card-footer">
