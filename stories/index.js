@@ -9,14 +9,29 @@ import Header from '../src/components/header/'
 import FilterControls from '../src/components/filterControls/'
 import Movie from '../src/components/movie/'
 import MovieList from '../src/components/movieList/'
+import MovieInfo from '../src/components/moviePublic/publicInfo'
 
 
 
 const sample = {
-  title: 'Twilight',
-  vote_average: 8.6,
-  release_date: 2,
-  picture: {thumbnail: './film-poster-placeholder.png'}
+  popularity: 457.734,
+  vote_count: 4850,
+  video: false,
+  poster_path: "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+  id: 475557,
+  adult : false,
+  backdrop_path: "/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+  original_language: "en",
+  original_title: "Joker",
+  genre_ids: [
+    80,
+    18,
+    53
+  ],
+  title: "Joker",
+  vote_average: 8.5,
+  overview: "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+  release_date: "2019-10-04"
 }
 
 storiesOf("Movies List App/Header", module).add("default", () => (
@@ -51,3 +66,9 @@ storiesOf("Movies List App/Movie List", module)
   const samples = [sample, sample, sample, sample, sample]
   return <MovieList movies={samples}/>
 });
+
+
+storiesOf("Movies List App/Movie Info/MovieInfo", module)
+.add("default", () => ( 
+   <MovieInfo movie={sample}/>
+));
