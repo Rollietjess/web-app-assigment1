@@ -2,6 +2,7 @@ import React from 'react';
 import { storiesOf } from '@storybook/react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
 import { action } from '@storybook/addon-actions';
+import { MemoryRouter, Route } from "react-router";
 
 
 import Header from '../src/components/header/'
@@ -27,11 +28,26 @@ storiesOf("Movies List App/Filter Controls", module).add("default", () => (
 ));   
 
 
-storiesOf("Movies List App/Movie", module).add("default", () => ( 
-  <Movie movie={sample} deleteHandler={action('Delete confirmed') }/>
-));    
+// storiesOf("Movies List App/Movie", module).add("default", () => ( 
+//   <Movie movie={sample} deleteHandler={action('Delete confirmed') }/>
+// ));    
+storiesOf("Movies List App/Movie", module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+))
+.add("default", () => ( 
+   <Contact movie={sample} deleteHandler={action('Delete confirmed') }/>
+));
 
-storiesOf("Movies List App/Movie List", module).add("default", () => { 
+// storiesOf("Movies List App/Movie List", module).add("default", () => { 
+//   const samples = [sample, sample, sample, sample, sample]
+//   return <MovieList movies={samples}/>
+// });
+storiesOf("Movies List App/Movie List", module)
+.addDecorator(story => (
+  <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
+))
+.add("default", () => { 
   const samples = [sample, sample, sample, sample, sample]
   return <MovieList movies={samples}/>
 });

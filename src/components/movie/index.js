@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 import "./movie.css";
 import "../../fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -64,11 +65,15 @@ class Movie extends Component {
     return (
       <div className="col-sm-3">
         <div className={`card  ${cardColor}`}>
-          <img
-            className="card-img-tag center "
-            alt={this.props.movie.title}
-            src={'https://image.tmdb.org/t/p/w500/' + this.props.movie.poster_path}
-          />
+          <Link
+            to={`/movies/${this.props.movie.id}`}
+          >
+            <img
+              className="card-img-tag center "
+              alt={this.props.movie.title}
+              src={'https://image.tmdb.org/t/p/w500/' + this.props.movie.poster_path}
+            />
+          </Link>
           <div className="card-body">
             <h5 className="card-title ">
               {`${this.props.movie.title}`}
