@@ -10,6 +10,7 @@ import FilterControls from '../src/components/filterControls/'
 import Movie from '../src/components/movie/'
 import MovieList from '../src/components/movieList/'
 import MovieInfo from '../src/components/moviePublic/publicInfo'
+import MovieInfoPrivate from '../src/components/moviePrivate/'
 
 
 
@@ -71,4 +72,9 @@ storiesOf("Movies List App/Movie List", module)
 storiesOf("Movies List App/Movie Info/MovieInfo", module)
 .add("default", () => ( 
    <MovieInfo movie={sample}/>
+));
+
+storiesOf("Movies List App/Movie Info/Movie private", module)
+.add("default", () => ( 
+   <MovieInfoPrivate movie={sample}/>
 ));
