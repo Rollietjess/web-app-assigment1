@@ -17,6 +17,6 @@ const movies = [
 ];
 storiesOf("Movies", module)
   .add("01 - Table with movies", () => {
-    return <List movies={movies} name={movieList}/>;
+    return <List movies={movies}/>;
   })
 

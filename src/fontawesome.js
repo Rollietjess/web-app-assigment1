@@ -4,7 +4,8 @@ import {
   faPhone,
   faHome,
   faBirthdayCake,
-  faArrowCircleLeft
+  faArrowCircleLeft,
+  faClock
 } from "@fortawesome/free-solid-svg-icons";
 
-library.add(faEnvelope, faPhone, faHome, faBirthdayCake, faArrowCircleLeft);
+library.add(faEnvelope, faPhone, faHome, faBirthdayCake, faArrowCircleLeft, faClock);

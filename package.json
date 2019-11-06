@@ -1,19 +1,39 @@
 {
-  "name": "reactBasics",
-  "version": "1.0.0",
-  "description": "Demo basic React comcepts and constructs",
-  "scripts": {
-    "storybook": "start-storybook -p 9001 -c .storybook"
-  },
-  "author": "Diarmuid O Connor",
-  "license": "ISC",
-  "devDependencies": {
-    "@storybook/react": "^5.2.1",
-    "babel-loader": "^8.0.6"
-  },
+  "name": "contactlist",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.17",
+    "@fortawesome/free-solid-svg-icons": "^5.8.1",
+    "@fortawesome/react-fontawesome": "^0.1.4",
     "bootstrap": "^4.3.1",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.2"
+    "lodash": "^4.17.15",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
+    "react-google-maps": "^9.4.5",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "3.1.2",
+    "superagent": "^5.0.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@storybook/addon-actions": "^5.2.1",
+    "@storybook/react": "^5.2.1",
+    "babel-loader": "^8.0.6",
+    "cypress": "^3.1.5"
   }
 }

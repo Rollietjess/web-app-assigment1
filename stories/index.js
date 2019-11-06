@@ -5,11 +5,26 @@ import '../node_modules/bootstrap/dist/css/bootstrap.css';
 
 import Header from '../src/components/header/'
 import FilterControls from '../src/components/filterControls/'
+import Movie from '../src/components/movie/'
 
-storiesOf("Movies list app/Header", module).add("default", () => (
-    <Header noContacts={33} />
+
+
+const sample = {
+  title: 'Twilight',
+  genre: 'Romance',
+  duration: 2,
+  picture: {thumbnail: './film-poster-placeholder.png'}
+}
+
+storiesOf("Movies List App/Header", module).add("default", () => (
+    <Header noMovies={33} />
   ));
   
-storiesOf("Movies list app/Filter Controls", module).add("default", () => (
+storiesOf("Movies List App/Filter Controls", module).add("default", () => (
   <FilterControls />
 ));   
+
+
+storiesOf("Movies List App/Movie", module).add("default", () => ( 
+  <Movie movie={sample}/>
+));    

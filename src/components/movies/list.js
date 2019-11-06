@@ -12,7 +12,6 @@ export default class List extends Component {
     ));
     return (
       <div>
-        <h1>{name}</h1>
         <table className="table table-bordered">
           <thead>
             <tr>
