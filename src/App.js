@@ -4,10 +4,11 @@ import MovieList from "./components/movieList/";
 import FilterControls from "./components/filterControls/";
 import request from "superagent";
 import api from "./dataStore/stubAPI"; // NEW
+require('dotenv').config()
 
 class App extends Component {
     componentDidMount() {
-        request.get("https://api.themoviedb.org/3/discover/movie?api_key=&language=en-US&include_adult=false&include_video=false&page=1").end((error, res) => {
+        request.get("https://api.themoviedb.org/3/discover/movie?api_key="+process.env.REACT_APP_TMD_API_KEY+"&language=en-US&include_adult=false&include_video=false&page=1").end((error, res) => {
         if (res) {
             let { results: movies } = JSON.parse(res.text);
             api.initialize(movies);
