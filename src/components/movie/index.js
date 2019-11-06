@@ -11,17 +11,15 @@ class Movie extends Component {
           <img
             className="card-img-tag center "
             alt={this.props.movie.title}
-            src={"https://image.tmdb.org/t/p/w500/" + this.props.movie.poster_path}
+            src={this.props.movie.picture.thumbnail}
           />
           <div className="card-body">
             <h5 className="card-title ">
               {`${this.props.movie.title}`}
             </h5>
-            <p key="rating">
-              <span> {this.props.movie.vote_average}</span>
-            </p>
-            <p key="release_date">
-              <span> {this.props.movie.release_date}</span>
+            <p key="duration">
+              <FontAwesomeIcon icon={["fa", "clock"]} />
+              <span> {this.props.movie.duration}</span>
             </p>
           </div>
           <div className="card-footer">

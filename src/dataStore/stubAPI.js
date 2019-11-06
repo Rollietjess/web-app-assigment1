@@ -2,16 +2,16 @@ import _ from "lodash";
 
 class StubAPI {
     constructor() {
-        this.movies = [];
+        this.contacts = [];
     }
 
     find(id) {
         let index = _.findIndex(
-        this.movies,
-        movie => `${movie.phone}${movie.cell}` === id
+        this.contacts,
+        contact => `${contact.phone}${contact.cell}` === id
         );
         if (index !== -1) {
-        return this.movies[index];
+        return this.contacts[index];
         }
         return null;
     }
@@ -21,12 +21,12 @@ class StubAPI {
         return elements;
     }
 
-    initialize(movies) {
-        this.movies = movies;
+    initialize(contacts) {
+        this.contacts = contacts;
     }
 
     getAll() {
-        return this.movies;
+        return this.contacts;
     }
 
     update(key, email, phone) {
