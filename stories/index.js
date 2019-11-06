@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import { action } from '@storybook/addon-actions';
 
 
 import Header from '../src/components/header/'
@@ -27,7 +28,7 @@ storiesOf("Movies List App/Filter Controls", module).add("default", () => (
 
 
 storiesOf("Movies List App/Movie", module).add("default", () => ( 
-  <Movie movie={sample}/>
+  <Movie movie={sample} deleteHandler={action('Delete confirmed') }/>
 ));    
 
 storiesOf("Movies List App/Movie List", module).add("default", () => { 

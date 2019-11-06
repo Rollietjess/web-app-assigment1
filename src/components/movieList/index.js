@@ -5,7 +5,11 @@ import './movieList.css';
 export default class MovieList extends Component {
   render() {
     const movieCards = this.props.movies.map(m => (
-      <Movie key={m.title} movie={m} />
+      <Movie 
+        key={m.title} 
+        movie={m} 
+        deleteHandler={this.props.deleteHandler}
+      />
     ));
     return (
       <div className="container-fluid movies bg-info">

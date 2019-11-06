@@ -37,7 +37,15 @@ class Movie extends Component {
   };
   handleRatingChange = e => this.setState({ vote_average: e.target.value });
   handleReleaseChange = e => this.setState({ release_date: e.target.value });
+  handleDelete = () =>  this.setState({ status : 'del'} );
+  handleConfirm = (e) => {
+    e.preventDefault();
+    this.props.deleteHandler(this.state.id);
+  };
   render() {
+    // let namesList = this.props.movie.genre_ids.map(function(name){
+    //   return <li>{name}</li>;
+    // })
     let activeButtons = buttons.normal;
     let leftButtonHandler = this.handleEdit;
     let rightButtonHandler = this.handleDelete;
@@ -47,6 +55,11 @@ class Movie extends Component {
       activeButtons = buttons.edit;
       leftButtonHandler = this.handleSave;
       rightButtonHandler = this.handleCancel;
+    } else if (this.state.status === 'del' ) {
+      cardColor = "bg-warning";
+      activeButtons = buttons.delete;
+      leftButtonHandler = this.handleCancel;
+      rightButtonHandler = this.handleConfirm;
     }
     return (
       <div className="col-sm-3">
@@ -89,6 +102,10 @@ class Movie extends Component {
                   <FontAwesomeIcon icon={["fas", "phone"]} />
                   <span> {this.props.movie.vote_average} </span>
                 </p>
+                {/* <p>
+                  <FontAwesomeIcon icon={["fas", "phone"]} />
+                  <span> {namesList} </span>
+                </p> */}
 
               </Fragment>
             )}

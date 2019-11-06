@@ -17,7 +17,7 @@ class StubAPI {
     }
 
     delete(k) {
-        let elements = _.remove(this.contacts, contact => contact.phone === k);
+        let elements = _.remove(this.movies, movie => movie.id === k);
         return elements;
     }
 
