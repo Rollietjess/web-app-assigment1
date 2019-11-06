@@ -1,0 +1,19 @@
+{
+  "name": "reactBasics",
+  "version": "1.0.0",
+  "description": "Demo basic React comcepts and constructs",
+  "scripts": {
+    "storybook": "start-storybook -p 9001 -c .storybook"
+  },
+  "author": "Diarmuid O Connor",
+  "license": "ISC",
+  "devDependencies": {
+    "@storybook/react": "^5.2.1",
+    "babel-loader": "^8.0.6"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "react": "^16.5.1",
+    "react-dom": "^16.5.2"
+  }
+}
