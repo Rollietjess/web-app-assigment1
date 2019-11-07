@@ -1,5 +1,3 @@
-# web-app-assigment1
-
 # BSc (Hons.) Level 8 - Assignment 1 - Single Page app.
 
 Name: Rolinda Strijker
