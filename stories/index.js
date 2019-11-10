@@ -12,6 +12,7 @@ import MovieList from '../src/components/movieList/'
 import MovieInfo from '../src/components/moviePublic/publicInfo'
 import MovieInfoPrivate from '../src/components/moviePrivate/'
 import MovieInfoPublic from '../src/components/moviePublic/'
+import CreateMovie from '../src/components/movieCreate/'
 
 
 
@@ -86,4 +87,9 @@ storiesOf("Movies List App/Movie Info/Movie public info", module)
 ))
 .add("default", () => ( 
    <MovieInfoPublic movie={sample}/>
+));
+
+storiesOf("Movies List App/Create movie", module)
+.add("default", () => ( 
+   <CreateMovie movie={sample}/>
 ));

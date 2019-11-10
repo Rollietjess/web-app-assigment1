@@ -24,14 +24,15 @@ class Movie extends Component {
   handleSave = e => {
     e.preventDefault();
     let updatedRelease = this.state.release_date.trim();
-    let updatedRating = this.state.vote_average.trim();
+    // let updatedRating = this.state.vote_average.trim();
+    let updatedRating = this.state.vote_average;
     if (!updatedRelease || !updatedRating) {
-    return;
+      return;
     }
-    let { release_date, vote_average } = this.state;
-    this.setState({ status: "", previousDetails: { release_date, vote_average } });
+    let { release_date, vote_average, id, title } = this.state;
+    this.setState({ status: "", previousDetails: {id, title, release_date, vote_average } });
     api.update(this.state.previousDetails.id, updatedRelease, updatedRating);
-  };     
+  }; 
   handleCancel = () => {
     let { title, vote_average, release_date } = this.state.previousDetails;
     this.setState({ status: "", title, vote_average, release_date });
@@ -107,11 +108,6 @@ class Movie extends Component {
                   <FontAwesomeIcon icon={["fa", "star"]} />
                   <span> {this.props.movie.vote_average} </span>
                 </p>
-                {/* <p>
-                  <FontAwesomeIcon icon={["fas", "phone"]} />
-                  <span> {namesList} </span>
-                </p> */}
-
               </Fragment>
             )}
           </div>

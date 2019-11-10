@@ -2,9 +2,11 @@ import React, { Component, Fragment } from "react";
 import Header from "./components/header/";
 import MovieList from "./components/movieList/";
 import FilterControls from "./components/filterControls/";
+import MovieCreate from "./components/movieCreate/";
 import request from "superagent";
 import api from "./dataStore/stubAPI"; // NEW
 import _ from "lodash";
+import { thisExpression } from "@babel/types";
 
 require('dotenv').config()
 
@@ -15,6 +17,10 @@ class App extends Component {
     };
     deleteMovie = (key) => {
         api.delete(key); 
+        this.setState({});                          
+    };
+    createMovie = (movie) => {
+        api.create(movie); 
         this.setState({});                          
     };
     render() {
@@ -29,6 +35,7 @@ class App extends Component {
         return (
             <Fragment>
               <Header noMovies={sortedMovies.length} />
+              <MovieCreate createHandler={this.createMovie}/>
               <FilterControls onUserInput={this.handleChange} />
               <MovieList
                 movies={sortedMovies}

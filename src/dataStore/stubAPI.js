@@ -7,11 +7,11 @@ class StubAPI {
 
     find(id) {
         let index = _.findIndex(
-        this.movies,
-        movie => `${movie.id}` === id
+            this.movies,
+            movie => `${movie.id}` === id
         );
         if (index !== -1) {
-        return this.movies[index];
+            return this.movies[index];
         }
         return null;
     }
@@ -22,7 +22,6 @@ class StubAPI {
     }
 
     initialize(movies) {
-        console.log(movies)
         this.movies = movies;
     }
 
@@ -33,11 +32,21 @@ class StubAPI {
     update(key, release_date, vote_average) {
         let index = _.findIndex(this.movies, movie => movie.id === key);
         if (index !== -1) {
-        this.movies[index].release_date = release_date;
-        this.movies[index].vote_average = vote_average;
-        return true;
+            this.movies[index].release_date = release_date;
+            this.movies[index].vote_average = vote_average;
+            return true;
         }
         return false;
+    }
+
+    create(movie) {
+        let newMovie = {
+            title: movie.title,
+            vote_average: movie.vote_average,
+            release_date: movie.release_date
+        }
+        this.movies.push(newMovie);
+        return true;
     }
 }
 

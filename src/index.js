@@ -6,6 +6,7 @@ import api from "./dataStore/stubAPI"; // NEW
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import MoviePage from "./components/moviePage";
+import MovieCreatePage from "./components/movieCreatePage";
 
 class Router extends Component {
   componentDidMount() {
@@ -27,6 +28,7 @@ class Router extends Component {
           <div className="container-fluid ">
             <Switch>
               <Route path="/movies/:id" component={MoviePage} />
+              <Route path="/create" component={MovieCreatePage} />
               <Route exact path="/" component={App} />
               <Redirect from="*" to="/" />
             </Switch>

@@ -1,30 +1,30 @@
 .center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
 }
 
 .card-body  {
-    word-break:break-all
+  word-break:break-all
 }
 
 .container-fluid {
-    background-color: #e9ebee;
-  }
+  background-color: #e9ebee;
+}
 
-  .col-sm-3 {
-    width: calc(100% / 4 - 15px);
-    flex: none;
-      padding:0px;
-    margin-right: 15px;
-    margin-bottom: 15px;
-  }
+.col-sm-3 {
+  width: calc(100% / 4 - 15px);
+  flex: none;
+  padding:0px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
 
-  .col-sm-3:nth-child(4n){
-      margin-right: 0px;
-  }
+.col-sm-3:nth-child(4n){
+  margin-right: 0px;
+}
 
-  .grey {
-      background-color: #d5d5d5;
-  }
+.grey {
+  background-color: #d5d5d5;
+}
