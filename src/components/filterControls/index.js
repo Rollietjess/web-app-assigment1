@@ -50,29 +50,30 @@ export default class filterControls extends Component {
     //     );
     // });  
     return (
-      <div className="container-fluid">
-        <div className="row bg-warning">
-          <div className="col-md-12">
-            <h4>
-              <span>Filter </span>
-              <input
-                  type="text"
-                  placeholder="Title"
-                  onChange={this.handleTextChange}
-              />
-              <span> Genre: </span>
-              <select
-                id="genre"
-                onChange={this.handleGenreChange}
-              >
-                <option value="all">All</option>
-                <option value="10749">Romance</option>
-                <option value="16">Animation</option>
-                <option value="35">Comedy</option>
-                <option value="27">Horror</option>
-                {/* {list} */}
-              </select>
-            </h4>
+      <div className="container-fluid filter">
+        <div className="row">
+          <div className="col input_block borderr">
+            <label>Title</label>
+            <input
+              type="text"
+              className="text"
+              placeholder="Joker"
+              onChange={this.handleTextChange}
+            />
+          </div>
+          <div className="col input_block">
+            <label>Genre</label>
+            <select
+              id="genre"
+              onChange={this.handleGenreChange}
+            >
+              <option value="all">All</option>
+              <option value="10749">Romance</option>
+              <option value="16">Animation</option>
+              <option value="35">Comedy</option>
+              <option value="27">Horror</option>
+              {/* {list} */}
+            </select>
           </div>
         </div>
       </div>

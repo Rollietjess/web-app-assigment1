@@ -12,7 +12,7 @@ export default class MovieList extends Component {
       />
     ));
     return (
-      <div className="container-fluid movies bg-info">
+      <div className="container-fluid movies">
         <div className="row">{movieCards}</div>
       </div>
     );

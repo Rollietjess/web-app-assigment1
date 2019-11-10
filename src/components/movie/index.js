@@ -52,7 +52,7 @@ class Movie extends Component {
     let rightButtonHandler = this.handleDelete;
     let cardColor = "bg-white";
     if (this.state.status === "edit") {
-      cardColor = "bg-primary";
+      cardColor = "grey";
       activeButtons = buttons.edit;
       leftButtonHandler = this.handleSave;
       rightButtonHandler = this.handleCancel;
@@ -100,11 +100,11 @@ class Movie extends Component {
             ) : (
               <Fragment>
                 <p>
-                  <FontAwesomeIcon icon={["fas", "envelope"]} />
+                  <FontAwesomeIcon icon={["fa", "calendar"]} />
                   <span> {this.props.movie.release_date}</span>
                 </p>
                 <p>
-                  <FontAwesomeIcon icon={["fas", "phone"]} />
+                  <FontAwesomeIcon icon={["fa", "star"]} />
                   <span> {this.props.movie.vote_average} </span>
                 </p>
                 {/* <p>

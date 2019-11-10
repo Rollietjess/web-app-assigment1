@@ -2,7 +2,7 @@ const buttons = {
     normal: {
         leftButtonVal: "Edit",
         rightButtonVal: "Delete",
-        leftButtonColor: "btn-default",
+        leftButtonColor: "btn-primary",
         rightButtonColor: "btn-danger"
     },
     delete: {
@@ -14,8 +14,8 @@ const buttons = {
     edit: {
         leftButtonVal: "Save",
         rightButtonVal: "Cancel",
-        leftButtonColor: "btn-danger",
-        rightButtonColor: "btn-light"
+        leftButtonColor: "btn-primary",
+        rightButtonColor: "btn-danger"
     }
 };
 export default buttons;

@@ -23,7 +23,7 @@ class Router extends Component {
   render() {
     return (
        <BrowserRouter>
-        <div className="jumbotron">
+        {/* <div className="jumbotron"> */}
           <div className="container-fluid ">
             <Switch>
               <Route path="/movies/:id" component={MoviePage} />
@@ -31,7 +31,7 @@ class Router extends Component {
               <Redirect from="*" to="/" />
             </Switch>
           </div>
-        </div>
+        {/* </div> */}
       </BrowserRouter>
     );
   }

@@ -22,6 +22,7 @@ class StubAPI {
     }
 
     initialize(movies) {
+        console.log(movies)
         this.movies = movies;
     }
 

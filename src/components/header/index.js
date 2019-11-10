@@ -5,7 +5,7 @@ class Header extends Component {
     return (
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-6 offset-4">
+          <div className="col-md-6">
             <div className="page-header">
               <h1>
                 Movie List <span className="badge badge-pill badge-success">{this.props.noMovies}</span>
