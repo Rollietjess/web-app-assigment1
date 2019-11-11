@@ -19,7 +19,10 @@ Features:
 
 ## Setup.
 
-. . . . Having cloned the repo, state the steps required to install and run the app . . . . .
+If you cloned the repo you need to run the command npm install (in a cmd in the project root folder) to install all the necessary node modules for this web app.
+In order to let this web app work with The Movie Database you will need an API key. This API key needs to be added to a .env file. This .env file needs to be created in the root of the web app. If you created the .env file add the following: REACT_APP_TMD_API_KEY=<THE_API_KEY>.
+
+After the above steps you can use the command npm start to see the whole web app or use the command npx start-storybook -p 9001 -c .storybook to start storybook and see all components apart.
 
 ## Data Model Design.
 
