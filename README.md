@@ -26,14 +26,29 @@ After the above steps you can use the command **npm start** to see the whole web
 
 ## Data Model Design.
 
-. . . . . A diagram of app's data model (see example below) AND/OR a sample of the test data used (JSON or equivalent).
-
 ![][model]
 
-. . . Briefly explain any non-trivial aspects of the model . . . . .
-
 ~~~
-place code snippets, e.g. JSON, inside these fence delimiters and they will appear in a block-like structure.
+sample = {
+  popularity: 457.734,
+  vote_count: 4850,
+  video: false,
+  poster_path: "/udDclJoHjfjb8Ekgsd4FDteOkCU.jpg",
+  id: 475557,
+  adult : false,
+  backdrop_path: "/n6bUvigpRFqSwmPp1m2YADdbRBc.jpg",
+  original_language: "en",
+  original_title: "Joker",
+  genre_ids: [
+    80,
+    18,
+    53
+  ],
+  title: "Joker",
+  vote_average: 8.5,
+  overview: "During the 1980s, a failed stand-up comedian is driven insane and turns to a life of crime and chaos in Gotham City while becoming an infamous psychopathic crime figure.",
+  release_date: "2019-10-04"
+}
 ~~~
 ## UI Design.
 
@@ -57,13 +72,8 @@ Below you see some screenshots of the web app and their use.
 
 ## Routing.
 
-. . . . List each route supported by the app. For each one state the associated view and whether it's public/private (requires authentication) . . . . .
-
-- /articles (public)- displays all published articles - title and author only.
-- /articles/:id (private) - detail view of a particular article.
-+ /articles/:author:id - display all articles by a specific author.
-- etc
-- etc
+- /movies (public)- displays all movies.
+- /movies/:id (private) - detail view of a particular movie.
 
 ## Storybook.
 
@@ -71,15 +81,11 @@ Below you see some screenshots of the web app and their use.
 
 ## Backend (Optional).
 
-. . . . . Briefly explain any backend used by the app (e.g. JSON-server, Open API) . . . . . .  
-
-## Authentication (Optional).
-
-. . . . Briefly explain the authentication method used by your app (e.g. JWT, Firebase) ). If user registration is not supported, mention test username/password pairs available . . . . . .
+Wanted to use a JSON-server from https://my-json-server.typicode.com/. But my json file has to much content and didn't have enought time to look for another option.
 
 ## Independent learning.
 
-. . . . . State any non-standard aspects of React or other related technologies that you researched and applied in this assignment, other than those covered by the two previous sections . . . . .
+I needed to figure all the stuff out for the API of The Movie Database.
 
 [model]: ./img/model.png
 [main]: ./img/main.png
