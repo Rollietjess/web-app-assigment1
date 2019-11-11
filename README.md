@@ -55,10 +55,6 @@ Below you see some screenshots of the web app and their use.
 
 >> On the detail page of a movie you also have a private part. When you click on the button **See Private Data** a list of similar movies will appear. This is just like reviews and movies collected with The Movie Database API.
 
-![][stories]
-
->> These are stories made for this web app.
-
 ## Routing.
 
 . . . . List each route supported by the app. For each one state the associated view and whether it's public/private (requires authentication) . . . . .
@@ -71,11 +67,7 @@ Below you see some screenshots of the web app and their use.
 
 ## Storybook.
 
-. . . . . Include a screenshot of the fully expanded list of stories from the tool's UI (see below). Group the stories appropriately (e.g. Contact page group) . . . .
-
 ![][stories]
-
-. . . . (Optional) State any non-standard Storybook add-ons used and include a screenshot(s) to illustrate.
 
 ## Backend (Optional).
 
