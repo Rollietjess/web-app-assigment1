@@ -91,7 +91,7 @@ Below you see some screenshots of the web app and their use.
 
 [model]: ./img/model.png
 [main]: ./img/main.png
-[addMovie]: ./img/addMovie.png
+[addMovie]: ./img/addMovie.PNG
 [detail]: ./img/detail.png
 [detailSimilar]: ./img/detailSimilar.png
 [stories]: ./img/stories.png
