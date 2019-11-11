@@ -28,6 +28,8 @@ After the above steps you can use the command **npm start** to see the whole web
 
 ![][model]
 
+Below a sample of the JSON code used for example storybook.
+
 ~~~
 sample = {
   popularity: 457.734,
@@ -81,7 +83,7 @@ Below you see some screenshots of the web app and their use.
 
 ## Backend (Optional).
 
-Wanted to use a JSON-server from https://my-json-server.typicode.com/. But my json file has to much content and didn't have enought time to look for another option.
+Wanted to use a JSON-server from https://my-json-server.typicode.com/. But my json file has to much content and I didn't have enough time to look for another option.
 
 ## Independent learning.
 
