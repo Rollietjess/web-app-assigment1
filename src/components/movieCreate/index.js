@@ -46,7 +46,7 @@ export default class movieCreate extends Component {
 
         return (
             <div className="container-fluid ">
-                <button variant="outline-primary" onClick={this.divclicked}>Add new movie</button>
+                <button className="btn btn-primary" onClick={this.divclicked}>Add new movie</button>
 
                 <div id="create" className={this.state.myclass}>
                     <div className="row">
@@ -86,7 +86,7 @@ export default class movieCreate extends Component {
                             <textarea name="overview" id="overview" onChange={this.handleChange} placeholder="Plot"></textarea>
                         </div>
                         <div className="col">
-                            <button type="submit" className="btn-primary" onClick={this.handleCreate}>Create</button>
+                            <button type="submit" className="btn btn-primary" onClick={this.handleCreate}>Create</button>
                         </div>
                     </div>
                 </div>

@@ -1,12 +1,16 @@
 img.movie {
     float: left;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-bottom: 2em;
-    background-color: gold;
+    /* background-color: gold; */
     padding: 1em;
     width: 100%;
 }
 
 .row {
     margin-bottom: 10px;
+}
+
+.pt {
+    padding-top: 20px;
 }
