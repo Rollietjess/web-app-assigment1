@@ -13,6 +13,7 @@ import MovieInfo from '../src/components/moviePublic/publicInfo'
 import MovieInfoPrivate from '../src/components/moviePrivate/'
 import MovieInfoPublic from '../src/components/moviePublic/'
 import CreateMovie from '../src/components/movieCreate/'
+import MoviesSimilar from '../src/components/moviesSimilar/'
 
 
 
@@ -54,7 +55,7 @@ storiesOf("Movies List App/Movie", module)
   <MemoryRouter initialEntries={["/"]}>{story()}</MemoryRouter>
 ))
 .add("default", () => ( 
-   <Contact movie={sample} deleteHandler={action('Delete confirmed') }/>
+   <Movie movie={sample} deleteHandler={action('Delete confirmed') }/>
 ));
 
 // storiesOf("Movies List App/Movie List", module).add("default", () => { 
@@ -92,4 +93,9 @@ storiesOf("Movies List App/Movie Info/Movie public info", module)
 storiesOf("Movies List App/Create movie", module)
 .add("default", () => ( 
    <CreateMovie movie={sample}/>
+));
+
+storiesOf("Movies List App/Similar movies", module)
+.add("default", () => ( 
+   <MoviesSimilar movie={sample}/>
 ));

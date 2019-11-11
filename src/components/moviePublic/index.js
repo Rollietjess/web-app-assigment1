@@ -28,8 +28,8 @@ export default ({ movie }) => {
         <div className="col-4">
           <PublicInfo movie={movie} />
         </div>
-        <div className="col-5 text-light">
-           <span>Similar movies</span>
+        <div className="col-5">
+          {movie.overview}
         </div>
       </div>
     </Fragment>

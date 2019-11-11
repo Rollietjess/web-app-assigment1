@@ -3,6 +3,7 @@ import _ from "lodash";
 class StubAPI {
     constructor() {
         this.movies = [];
+        this.similarMovies = [];
     }
 
     find(id) {
@@ -25,8 +26,16 @@ class StubAPI {
         this.movies = movies;
     }
 
+    initializeSimilar(similarMovies) {
+        this.similarMovies = similarMovies;
+    }
+
     getAll() {
         return this.movies;
+    }
+
+    getAllSimilar() {
+        return this.similarMovies;
     }
 
     update(key, release_date, vote_average) {
