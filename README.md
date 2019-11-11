@@ -37,15 +37,27 @@ place code snippets, e.g. JSON, inside these fence delimiters and they will appe
 ~~~
 ## UI Design.
 
-. . . . . Screenshots of the app's views with brief statements of their use (see examples below) . . . . . . .
+Below you see some screenshots of the web app and their use.
 
 ![][main]
 
->> Shows a card for each contact in the datastore. This contact list can be filtered by name and gender. A contact can be edited or deleted a contact. 
+>> Shows a card for each movie in the datastore. This movie list can be filtered by title and genre. A movie can be edited or deleted. 
+
+![][addMovie]
+
+>> When you click on the button **Add new movie** a new div will appear. In this div you can add a new movie.
 
 ![][detail]
 
->> . . . bla bla bla . . . . . 
+>> This is the detail page of a movie. In this detail view, reviews are shown too. These reviews are collected from the The Movie Database API too just like the movie itself. When clicking on read more you will be send to a new page where you can read the whole review.
+
+![][detailSimilar]
+
+>> On the detail page of a movie you also have a private part. When you click on the button **See Private Data** a list of similar movies will appear. This is just like reviews and movies collected with The Movie Database API.
+
+![][stories]
+
+>> These are stories made for this web app.
 
 ## Routing.
 
@@ -79,5 +91,7 @@ place code snippets, e.g. JSON, inside these fence delimiters and they will appe
 
 [model]: ./img/model.png
 [main]: ./img/main.png
+[addMovie]: ./img/addMovie.png
 [detail]: ./img/detail.png
+[detailSimilar]: ./img/detailSimilar.png
 [stories]: ./img/stories.png
