@@ -4,6 +4,7 @@ class StubAPI {
     constructor() {
         this.movies = [];
         this.similarMovies = [];
+        this.movieReviews = [];
     }
 
     find(id) {
@@ -30,12 +31,20 @@ class StubAPI {
         this.similarMovies = similarMovies;
     }
 
+    initializeReviews(movieReviews) {
+        this.movieReviews = movieReviews;
+    }
+
     getAll() {
         return this.movies;
     }
 
     getAllSimilar() {
         return this.similarMovies;
+    }
+
+    getAllReviews() {
+        return this.movieReviews;
     }
 
     update(key, release_date, vote_average) {

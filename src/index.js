@@ -9,7 +9,9 @@ import MoviePage from "./components/moviePage";
 
 class Router extends Component {
   componentDidMount() {
-    request.get("https://api.themoviedb.org/3/discover/movie?api_key="+process.env.REACT_APP_TMD_API_KEY+"&language=en-US&include_adult=false&include_video=false&page=1").end((error, res) => {
+    var numberArray = [1, 2, 3, 4, 5, 6];
+    var rand = numberArray[Math.floor(Math.random() * numberArray.length)];
+    request.get("https://api.themoviedb.org/3/discover/movie?api_key="+process.env.REACT_APP_TMD_API_KEY+"&language=en-US&include_adult=false&include_video=false&page="+rand+"").end((error, res) => {
       if (res) {
         let { results: movies } = JSON.parse(res.text);
         api.initialize(movies);

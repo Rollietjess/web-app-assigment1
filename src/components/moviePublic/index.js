@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./moviePublic.css";
 import { Link } from "react-router-dom";
 import PublicInfo from "../moviePublic/publicInfo"
+import MovieReviews from "../movieReviews/"
 
 export default ({ movie }) => {
   const name = movie.title;
@@ -29,7 +30,14 @@ export default ({ movie }) => {
           <PublicInfo movie={movie} />
         </div>
         <div className="col-5">
-          {movie.overview}
+          <div className="row">
+            <h3>Plot</h3>
+            {movie.overview}
+          </div>
+          <div className="row">
+            <h3>Reviews</h3>
+            <MovieReviews movie={movie} />
+          </div>
         </div>
       </div>
     </Fragment>

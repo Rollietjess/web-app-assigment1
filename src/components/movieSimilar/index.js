@@ -11,15 +11,11 @@ class movieSimilar extends Component {
     return (
       <div className="col-sm-4">
         <div className="cardSimilar">
-          <Link
-            to={`/movies/${this.props.movie.id}`}
-          >
             <img
               className="card-img-tag centerSimilar "
               alt={this.props.movie.title}
               src={this.props.movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + this.props.movie.poster_path : './film-poster-placeholder.png'}
             />
-          </Link>
           <div className="card-bodySimilar">
             <h5 className="card-title ">
               {`${this.props.movie.title}`}

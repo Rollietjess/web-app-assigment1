@@ -19,10 +19,10 @@ export default ({ movie }) => {
         <FontAwesomeIcon icon={["fas", "phone"]} />
         <span> {movie.vote_count}</span>
       </h4>
-      <h4>
+      {/* <h4>
         <FontAwesomeIcon icon={["fas", "envelope"]} />
         <span> {movie.original_title}</span>
-      </h4>
+      </h4> */}
     </Fragment>
   );
 };

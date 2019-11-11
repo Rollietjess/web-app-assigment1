@@ -20,13 +20,12 @@ export default class moviesSimilar extends Component {
 
     render() {
         let similarMovies = api.getAllSimilar();
-        console.log(similarMovies)
         const movieSimilarCards = similarMovies.map(m => (
             <MovieSimilar 
               key={m.title} 
               movie={m}
             />
-          ));
+        ));
         return (
             <div className="container-fluid">
                 <h3>Similar Movies</h3>
