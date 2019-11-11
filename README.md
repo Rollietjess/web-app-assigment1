@@ -6,7 +6,7 @@ Name: Rolinda Strijker
 
 In this web app you will see a list of movies. This list is filled with a movie api from The Movie Database. In order for this web app to work you will need an API key from The Movie Database. When clicking on a movie you will see some more information about the movie (plot, reviews and similar movies). You can edit and delete a movie and you can also add a movie.
 
-Features:
+### Features
 
 - Discover movies
 - Edit movie
@@ -19,10 +19,10 @@ Features:
 
 ## Setup.
 
-If you cloned the repo you need to run the command npm install (in a cmd in the project root folder) to install all the necessary node modules for this web app.
-In order to let this web app work with The Movie Database you will need an API key. This API key needs to be added to a .env file. This .env file needs to be created in the root of the web app. If you created the .env file add the following: REACT_APP_TMD_API_KEY=<THE_API_KEY>.
+If you cloned the repo you need to run the command **npm install** (in a cmd in the project root folder) to install all the necessary node modules for this web app.
+In order to let this web app work with The Movie Database you will need an API key. This API key needs to be added to a .env file. This .env file needs to be created in the root of the web app. If you created the .env file add the following: **REACT_APP_TMD_API_KEY=<THE_API_KEY>**.
 
-After the above steps you can use the command npm start to see the whole web app or use the command npx start-storybook -p 9001 -c .storybook to start storybook and see all components apart.
+After the above steps you can use the command **npm start** to see the whole web app or use the command **npx start-storybook -p 9001 -c .storybook** to start storybook and see all components apart.
 
 ## Data Model Design.
 
