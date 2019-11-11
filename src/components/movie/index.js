@@ -72,7 +72,7 @@ class Movie extends Component {
             <img
               className="card-img-tag center "
               alt={this.props.movie.title}
-              src={'https://image.tmdb.org/t/p/w500/' + this.props.movie.poster_path}
+              src={this.props.movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + this.props.movie.poster_path : './film-poster-placeholder.png'}
             />
           </Link>
           <div className="card-body">

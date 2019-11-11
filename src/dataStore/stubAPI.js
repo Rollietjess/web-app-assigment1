@@ -40,11 +40,21 @@ class StubAPI {
     }
 
     create(movie) {
+        console.log(movie)
+        let movieLength = this.movies.length + 1;
         let newMovie = {
+            id: movieLength,
             title: movie.title,
             vote_average: movie.vote_average,
-            release_date: movie.release_date
+            release_date: movie.release_date,
+            genre_ids: [parseInt(movie.genre)],
+            overview: movie.overview,
+            popularity: 128.919,
+            vote_count: 4028,
+            original_title: movie.title
         }
+
+        console.log(newMovie)
         this.movies.push(newMovie);
         return true;
     }

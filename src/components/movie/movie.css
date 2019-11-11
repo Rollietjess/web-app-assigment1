@@ -9,6 +9,10 @@
   word-break:break-all
 }
 
+.card {
+  height: 460px;
+}
+
 .container-fluid {
   background-color: #e9ebee;
 }

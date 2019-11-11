@@ -20,7 +20,7 @@ const MoviePage = props => {
 
         </Fragment>
       ) : (
-        <p>Waiting for contact details</p>
+        <p>Waiting for movie details</p>
       )}
     </Fragment>
   );
