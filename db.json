@@ -364,44 +364,6 @@
         "vote_average": 7.1,
         "overview": "In the wake of his dramatic escape from captivity, Jesse Pinkman must come to terms with his past in order to forge some kind of future.",
         "release_date": "2019-10-11"
-      },
-      {
-        "popularity": 87.43,
-        "vote_count": 334,
-        "video": false,
-        "poster_path": "/pIcV8XXIIvJCbtPoxF9qHMKdRr2.jpg",
-        "id": 338967,
-        "adult": false,
-        "backdrop_path": "/jCCdt0e8Xe9ttvevD4S3TSMNdH.jpg",
-        "original_language": "en",
-        "original_title": "Zombieland: Double Tap",
-        "genre_ids": [
-          28,
-          35,
-          27
-        ],
-        "title": "Zombieland: Double Tap",
-        "vote_average": 7.3,
-        "overview": "Columbus, Tallahassee, Wichita, and Little Rock move to the American heartland as they face off against evolved zombies, fellow survivors, and the growing pains of the snarky makeshift family.",
-        "release_date": "2019-10-18"
-      },
-      {
-        "popularity": 96.802,
-        "vote_count": 354,
-        "video": false,
-        "poster_path": "/tximyCXMEnWIIyOy9STkOduUprG.jpg",
-        "id": 521777,
-        "adult": false,
-        "backdrop_path": "/zIZv4pPJRg3YTnWWuotwXnYu1fM.jpg",
-        "original_language": "en",
-        "original_title": "Good Boys",
-        "genre_ids": [
-          35
-        ],
-        "title": "Good Boys",
-        "vote_average": 6.5,
-        "overview": "A group of young boys on the cusp of becoming teenagers embark on an epic quest to fix their broken drone before their parents get home.",
-        "release_date": "2019-08-16"
       }
     ]
   }
