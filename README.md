@@ -4,15 +4,18 @@ Name: Rolinda Strijker
 
 ## Overview.
 
-...... A statement of the app concept and its objectives (a paragraph) ........
+In this web app you will see a list of movies. This list is filled with a movie api from The Movie Database. In order for this web app to work you will need an API key from The Movie Database. When clicking on a movie you will see some more information about the movie (plot, reviews and similar movies). You can edit and delete a movie and you can also add a movie.
 
-. . . . . List of user features  . . . .
+Features:
 
-- Feature 1
-- Feature 2
-- Feature 3
-- etc
-- etc
+- Discover movies
+- Edit movie
+- Delete movie
+- Add movie
+- See more info of a movie
+- See movie reviews
+- See similar movies
+- Filter movies in movie list
 
 ## Setup.
 
