@@ -3,6 +3,8 @@
 // import bodyParser from 'body-parser';
 import bodyParser from 'body-parser';
 import contactsRouter from './api/contacts';
+import loadContacts from './contactsData';
+import './db'
 
 require('dotenv').config()
 
@@ -25,3 +27,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use('/api/contacts', contactsRouter);
+
+if (process.env.seedDb) {
+  loadContacts();
+}
