@@ -8,8 +8,6 @@ import api from "./dataStore/stubAPI"; // NEW
 import _ from "lodash";
 import { thisExpression } from "@babel/types";
 
-require('dotenv').config()
-
 class App extends Component {
     state = { search: "", genre: "all" };
     handleChange = (type, value) => {
