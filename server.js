@@ -3,7 +3,9 @@
 // import bodyParser from 'body-parser';
 import bodyParser from 'body-parser';
 import contactsRouter from './api/contacts';
+import actorsRouter from './api/actors';
 import loadContacts from './contactsData';
+import loadActors from './actorData';
 import './db'
 
 require('dotenv').config()
@@ -27,7 +29,9 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use('/api/contacts', contactsRouter);
+app.use('/api/actors', actorsRouter);
 
 if (process.env.seedDb) {
   loadContacts();
+  loadActors();
 }
