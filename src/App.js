@@ -8,6 +8,8 @@ import api from "./dataStore/stubAPI"; // NEW
 import _ from "lodash";
 import { thisExpression } from "@babel/types";
 
+
+
 class App extends Component {
     state = { search: "", genre: "all" };
     handleChange = (type, value) => {
@@ -23,6 +25,7 @@ class App extends Component {
     };
     render() {
         let movies = api.getAll();
+        console.log(movies)
         let filteredMovies = movies.filter(m => {
             const title = `${m.title}`;
             return title.toLowerCase().search(this.state.search.toLowerCase()) !== -1;
