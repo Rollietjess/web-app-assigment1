@@ -5,8 +5,6 @@ require('dotenv').config()
 const MovieDb = require('moviedb-promise')
 const moviedb = new MovieDb(process.env.REACT_APP_TMD_API_KEY)
 
-console.log("Movie Data")
-
 
 export default async function loadMovies() {
   try {

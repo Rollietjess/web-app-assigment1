@@ -9,12 +9,12 @@ import api from '../../dataStore/stubAPI'
 class Movie extends Component {
   state = {
       status: "",
-      _id: this.props.movie._id,
+      id: this.props.movie.id,
       title: this.props.movie.title,
       vote_average: this.props.movie.vote_average,
       release_date: this.props.movie.release_date,
       previousDetails: {
-        _id: this.props.movie._id,
+        id: this.props.movie.id,
         title: this.props.movie.title,
         vote_average: this.props.movie.vote_average,
         release_date: this.props.movie.release_date,
@@ -29,8 +29,8 @@ class Movie extends Component {
     if (!updatedRelease || !updatedRating) {
       return;
     }
-    let { release_date, vote_average, _id, title } = this.state;
-    this.setState({ status: "", previousDetails: {_id, title, release_date, vote_average } });
+    let { release_date, vote_average, id, title } = this.state;
+    this.setState({ status: "", previousDetails: {id, title, release_date, vote_average } });
     api.update(this.state.previousDetails.id, updatedRelease, updatedRating);
   }; 
   handleCancel = () => {
@@ -42,7 +42,7 @@ class Movie extends Component {
   handleDelete = () =>  this.setState({ status : 'del'} );
   handleConfirm = (e) => {
     e.preventDefault();
-    this.props.deleteHandler(this.state._id);
+    this.props.deleteHandler(this.state.id);
   };
   render() {
     // let namesList = this.props.movie.genre_ids.map(function(name){

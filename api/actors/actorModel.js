@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
 const ActorSchema = new Schema({
-  name: String,
+  name: {type: String, required: true},
   age: {
     type: Number,
     min: 0,

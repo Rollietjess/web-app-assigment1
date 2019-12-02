@@ -6,6 +6,7 @@ import api from "./dataStore/stubAPI"; // NEW
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import MoviePage from "./components/moviePage";
+import * as api2 from './api';
 
 
 
