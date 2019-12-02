@@ -20,8 +20,29 @@ class App extends Component {
         this.setState({});                          
     };
     createMovie = (movie) => {
-        api.create(movie); 
-        this.setState({});                          
+        // request.post("http://localhost:3001/api/movies").end((error, res) => {
+        // if (res) {
+        //     // console.log(res)
+        //     // let { results: movies } = JSON.parse(res.body);
+        //     // let movies = res.body;
+        //     // console.log(movies)
+        //     // api.initialize(movies);
+        //     this.setState({});
+        // } else {
+        //     console.log(error);
+        // }
+        // });
+        request
+            .post("http://localhost:3001/api/movies")
+            .send(movie) // sends a JSON post body
+            .end((err, res) => {
+                console.log("set state?")
+                // Calling the end function will send the request
+                if(res){
+                    api.create(movie); 
+                    this.setState({});
+                }
+            });
     };
     render() {
         let movies = api.getAll();
