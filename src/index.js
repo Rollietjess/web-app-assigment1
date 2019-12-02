@@ -7,6 +7,8 @@ import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import MoviePage from "./components/moviePage";
 
+console.log("Index!")
+
 class Router extends Component {
   state = {
     data: null

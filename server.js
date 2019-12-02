@@ -2,13 +2,15 @@
 // import express from 'express';
 // import bodyParser from 'body-parser';
 import bodyParser from 'body-parser';
-import contactsRouter from './api/contacts';
 import actorsRouter from './api/actors';
-import loadContacts from './contactsData';
+import moviesRouter from './api/movies';
 import loadActors from './actorData';
+import loadMovies from './movieData';
 import './db'
 
 require('dotenv').config()
+
+console.log("Server")
 
 const express = require('express');
 const app = express();
@@ -28,10 +30,10 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 
-app.use('/api/contacts', contactsRouter);
 app.use('/api/actors', actorsRouter);
+app.use('/api/movies', moviesRouter);
 
 if (process.env.seedDb) {
-  loadContacts();
   loadActors();
+  loadMovies();
 }
