@@ -21,6 +21,28 @@ router.post('/', asyncHandler(async (req, res) => {
     res.status(201).json(movie);
 }));
 
+// Update a movie
+router.put('/:id', asyncHandler(async (req, res) => {
+  if (req.body._id) delete req.body._id;
+  const movie = await Movie.update({
+    _id: req.params.id,
+  }, req.body, {
+    upsert: false,
+  });
+  if (!movie) return res.sendStatus(404);
+  return res.json(200, movie);
+}));
+
+// Delete a movie
+router.delete('/:id', asyncHandler(async (req, res) => {
+  const movie = await Movie.findById(req.params.id);
+  if (!movie) return res.send(404);
+  await movie.remove();
+  return res.status(204).send(movie);
+}));
+
+
+
 /**
  * Handle general errors.
  * @param {object} res The response object
