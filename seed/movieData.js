@@ -1,4 +1,4 @@
-import movieModel from './api/movies/movieModel';
+import movieModel from '../api/movies/movieModel';
 
 require('dotenv').config()
 

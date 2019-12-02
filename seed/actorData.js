@@ -1,4 +1,4 @@
-import actorModel from './api/actors/actorModel';
+import actorModel from '../api/actors/actorModel';
 
 const actors = [
     {

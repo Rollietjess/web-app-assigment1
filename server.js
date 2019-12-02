@@ -4,8 +4,9 @@
 import bodyParser from 'body-parser';
 import actorsRouter from './api/actors';
 import moviesRouter from './api/movies';
-import loadActors from './actorData';
-import loadMovies from './movieData';
+
+import loadActors from './seed/actorData';
+import loadMovies from './seed/movieData';
 import './db'
 
 require('dotenv').config()

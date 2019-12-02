@@ -4,10 +4,6 @@ import asyncHandler from 'express-async-handler';
 
 const router = express.Router();
 
-// router.get('/', (req, res) => {
-//   res.send({ actors: actors });
-// });
-
 // Get all actors, using try/catch to handle errors
 router.get('/', async (req, res) => {
     try {
@@ -18,21 +14,33 @@ router.get('/', async (req, res) => {
     }
 });
 
-// router.post('/', (req, res) => {
-//         let newActor = req.body;
-//         if (newActor){
-//             actors.push({name: newActor.name, age : newActor.age}) ;
-//           res.status(201).send({message: "Actor Created"});
-//       }else{
-//             res.status(400).send({message: "Unable to find Contact in request. No Contact Found in body"});
-//       }
-// });
 
 // Create a actor, using async handler
 router.post('/', asyncHandler(async (req, res) => {
     const actor = await Actor.create(req.body);
     res.status(201).json(actor);
 }));
+
+// Update a actor
+router.put('/:id', asyncHandler(async (req, res) => {
+  if (req.body._id) delete req.body._id;
+  const actor = await Actor.update({
+    _id: req.params.id,
+  }, req.body, {
+    upsert: false,
+  });
+  if (!actor) return res.sendStatus(404);
+  return res.json(200, actor);
+}));
+
+// Delete a actor
+router.delete('/:id', asyncHandler(async (req, res) => {
+  const actor = await Actor.findById(req.params.id);
+  if (!actor) return res.send(404);
+  await actor.remove();
+  return res.status(204).send(actor);
+}));
+
 
 /**
  * Handle general errors.
