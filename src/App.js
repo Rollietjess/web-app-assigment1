@@ -16,27 +16,21 @@ class App extends Component {
         type === "title" ? this.setState({ search: value }) : this.setState({ genre: value });
     };
     deleteMovie = (key) => {
-        api.delete(key); 
-        this.setState({});                          
+        request
+            .delete("http://localhost:3001/api/movies/"+key)
+            .end((err, res) => {
+                // Calling the end function will send the request
+                if(res){
+                    api.delete(key); 
+                    this.setState({});
+                }
+            });                          
     };
     createMovie = (movie) => {
-        // request.post("http://localhost:3001/api/movies").end((error, res) => {
-        // if (res) {
-        //     // console.log(res)
-        //     // let { results: movies } = JSON.parse(res.body);
-        //     // let movies = res.body;
-        //     // console.log(movies)
-        //     // api.initialize(movies);
-        //     this.setState({});
-        // } else {
-        //     console.log(error);
-        // }
-        // });
         request
             .post("http://localhost:3001/api/movies")
             .send(movie) // sends a JSON post body
             .end((err, res) => {
-                console.log("set state?")
                 // Calling the end function will send the request
                 if(res){
                     api.create(movie); 
