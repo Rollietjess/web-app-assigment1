@@ -9,7 +9,8 @@ export const upvote = async (postId) => {
 
 export const getAll = async () => {
 //    const resp = await axios.get('/api/posts',{headers: {'Authorization': auth.getToken()}},)
-   const resp = await axios.get('http://localhost:3005/api/movies')
+  //  const resp = await axios.get('http://localhost:3005/api/movies')
+   const resp = await axios.get('api/movies')
    return resp.data;
 };
 

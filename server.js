@@ -5,8 +5,8 @@ import bodyParser from 'body-parser';
 import actorsRouter from './api/actors';
 import moviesRouter from './api/movies';
 
-import loadActors from './seed/actorData';
-import loadMovies from './seed/movieData';
+// import loadActors from './seed/actorData';
+// import loadMovies from './seed/movieData';
 import './db'
 
 require('dotenv').config()
@@ -34,7 +34,7 @@ app.use(bodyParser.urlencoded({
 app.use('/api/actors', actorsRouter);
 app.use('/api/movies', moviesRouter);
 
-if (process.env.seedDb) {
-  loadActors();
-  loadMovies();
-}
+// if (process.env.seedDb) {
+  // loadActors();
+  // loadMovies();
+// }

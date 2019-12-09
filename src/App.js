@@ -6,8 +6,9 @@ import MovieCreate from "./components/movieCreate/";
 import request from "superagent";
 import api from "./dataStore/stubAPI"; // NEW
 import _ from "lodash";
-import { thisExpression } from "@babel/types";
-require('dotenv').config()
+
+import * as api2 from './api';
+import { Redirect } from 'react-router-dom';
 
 
 class App extends Component {

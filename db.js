@@ -1,5 +1,6 @@
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import seed from './seed';
 
 dotenv.config();
 
@@ -16,3 +17,8 @@ db.on('disconnected', () => {
 db.once('open', () => {
     console.log(`database connected to ${db.name} on ${db.host}`);
 })
+
+db.once('open', () => {
+    console.log(`database connected to ${db.name} on ${db.host}`);
+    seed();
+});
