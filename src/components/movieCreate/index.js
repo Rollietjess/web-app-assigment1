@@ -30,7 +30,7 @@ export default class movieCreate extends Component {
 
     handleCreate = e => {
         e.preventDefault();
-        if(this.state.title != "" && this.state.genre != ""){
+        if(this.state.title !== "" && this.state.genre !== ""){
             this.props.createHandler(this.state);
         } else {
             console.log("Error!!")

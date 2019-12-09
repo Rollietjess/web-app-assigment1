@@ -7,10 +7,6 @@ import request from "superagent";
 import api from "./dataStore/stubAPI"; // NEW
 import _ from "lodash";
 
-import * as api2 from './api';
-import { Redirect } from 'react-router-dom';
-
-
 class App extends Component {
     state = { search: "", genre: "all" };
     handleChange = (type, value) => {

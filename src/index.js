@@ -6,7 +6,6 @@ import api from "./dataStore/stubAPI"; // NEW
 import "../node_modules/bootstrap/dist/css/bootstrap.css";
 import App from "./App";
 import MoviePage from "./components/moviePage";
-import * as api2 from './api';
 
 
 
@@ -16,8 +15,8 @@ class Router extends Component {
   };
   componentDidMount() {
     console.log("Index!")
-    var numberArray = [1, 2, 3, 4, 5, 6];
-    var rand = numberArray[Math.floor(Math.random() * numberArray.length)];
+    // var numberArray = [1, 2, 3, 4, 5, 6];
+    // var rand = numberArray[Math.floor(Math.random() * numberArray.length)];
     // request.get("https://api.themoviedb.org/3/discover/movie?api_key="+process.env.REACT_APP_TMD_API_KEY+"&language=en-US&include_adult=false&include_video=false&page="+rand+"").end((error, res) => {
     request.get("http://localhost:3005/api/movies").end((error, res) => {
       if (res) {

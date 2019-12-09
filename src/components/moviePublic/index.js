@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import { capitalize } from "../../util";
 import "../../fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./moviePublic.css";

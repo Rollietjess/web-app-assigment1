@@ -1,10 +1,7 @@
 import React, { Component, Fragment } from "react";
-import { Link } from "react-router-dom";
 import "./movieSimilar.css";
 import "../../fontawesome";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import buttons from "../../config/buttonsConfig";
-import api from '../../dataStore/stubAPI'
 
 class movieSimilar extends Component {
   render() {
