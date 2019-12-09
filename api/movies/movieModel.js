@@ -6,7 +6,7 @@ const MovieSchema = new Schema({
     vote_count: Number,
     video: Boolean,
     poster_path: String,
-    id: {type: Number, index: true},
+    id: Number,
     adult: Boolean,
     backdrop_path: String,
     original_language: String,

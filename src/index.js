@@ -19,7 +19,7 @@ class Router extends Component {
     var numberArray = [1, 2, 3, 4, 5, 6];
     var rand = numberArray[Math.floor(Math.random() * numberArray.length)];
     // request.get("https://api.themoviedb.org/3/discover/movie?api_key="+process.env.REACT_APP_TMD_API_KEY+"&language=en-US&include_adult=false&include_video=false&page="+rand+"").end((error, res) => {
-    request.get("http://localhost:3001/api/movies").end((error, res) => {
+    request.get("http://localhost:3005/api/movies").end((error, res) => {
       if (res) {
         // console.log(res)
         // let { results: movies } = JSON.parse(res.body);

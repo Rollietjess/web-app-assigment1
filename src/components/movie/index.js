@@ -9,6 +9,7 @@ import api from '../../dataStore/stubAPI'
 class Movie extends Component {
   state = {
       status: "",
+      _id: this.props.movie._id,
       id: this.props.movie.id,
       title: this.props.movie.title,
       vote_average: this.props.movie.vote_average,
@@ -42,7 +43,7 @@ class Movie extends Component {
   handleDelete = () =>  this.setState({ status : 'del'} );
   handleConfirm = (e) => {
     e.preventDefault();
-    this.props.deleteHandler(this.state.id);
+    this.props.deleteHandler(this.state._id);
   };
   render() {
     // let namesList = this.props.movie.genre_ids.map(function(name){

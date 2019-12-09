@@ -7,7 +7,7 @@ import request from "superagent";
 import api from "./dataStore/stubAPI"; // NEW
 import _ from "lodash";
 import { thisExpression } from "@babel/types";
-
+require('dotenv').config()
 
 
 class App extends Component {
@@ -17,7 +17,7 @@ class App extends Component {
     };
     deleteMovie = (key) => {
         request
-            .delete("http://localhost:3001/api/movies/"+key)
+            .delete("http://localhost:3005/api/movies/"+key)
             .end((err, res) => {
                 // Calling the end function will send the request
                 if(res){
@@ -28,7 +28,7 @@ class App extends Component {
     };
     createMovie = (movie) => {
         request
-            .post("http://localhost:3001/api/movies")
+            .post("http://localhost:3005/api/movies")
             .send(movie) // sends a JSON post body
             .end((err, res) => {
                 // Calling the end function will send the request
@@ -40,7 +40,6 @@ class App extends Component {
     };
     render() {
         let movies = api.getAll();
-        console.log(movies)
         let filteredMovies = movies.filter(m => {
             const title = `${m.title}`;
             return title.toLowerCase().search(this.state.search.toLowerCase()) !== -1;

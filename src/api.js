@@ -1,5 +1,6 @@
 import axios from 'axios';
 // import auth from './auth';
+require('dotenv').config()
 
 export const upvote = async (postId) => {
    axios.post(`/api/posts/${postId}/upvote`)
@@ -8,7 +9,7 @@ export const upvote = async (postId) => {
 
 export const getAll = async () => {
 //    const resp = await axios.get('/api/posts',{headers: {'Authorization': auth.getToken()}},)
-   const resp = await axios.get('http://localhost:3001/api/movies')
+   const resp = await axios.get('http://localhost:3005/api/movies')
    return resp.data;
 };
 

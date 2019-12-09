@@ -19,7 +19,7 @@ class StubAPI {
     }
 
     delete(k) {
-        let elements = _.remove(this.movies, movie => movie._id === k);
+        let elements = _.remove(this.movies, movie => movie.id === k);
         return elements;
     }
 

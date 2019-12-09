@@ -23,9 +23,9 @@ router.post('/', asyncHandler(async (req, res) => {
 
 // Update a movie
 router.put('/:id', asyncHandler(async (req, res) => {
-  if (req.body._id) delete req.body._id;
+  if (req.body.id) delete req.body.id;
   const movie = await Movie.update({
-    _id: req.params.id,
+    id: req.params.id,
   }, req.body, {
     upsert: false,
   });
