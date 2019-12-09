@@ -14,11 +14,14 @@ require('dotenv').config()
 console.log("Server")
 
 const express = require('express');
-const app = express();
+// const app = express();
+export const app = express(); //replaces the previous const app = express();
 const port = process.env.PORT;
 
-// console.log that your server is up and running
-app.listen(port, () => console.log(`Listening on port ${port}`));
+if(!module.parent){
+  // console.log that your server is up and running
+  app.listen(port, () => console.log(`Listening on port ${port}`));
+}
 
 // create a GET route
 app.get('/api', (req, res) => {

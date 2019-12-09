@@ -43,6 +43,7 @@ class Movie extends Component {
   handleDelete = () =>  this.setState({ status : 'del'} );
   handleConfirm = (e) => {
     e.preventDefault();
+    console.log(this.state._id)
     this.props.deleteHandler(this.state._id);
   };
   render() {
