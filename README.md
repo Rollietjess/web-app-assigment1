@@ -95,3 +95,45 @@ I needed to figure all the stuff out for the API of The Movie Database.
 [detail]: ./img/detail.png
 [detailSimilar]: ./img/detailSimilar.png
 [stories]: ./img/stories.png
+
+
+# BSc (Hons.) Level 8 - Assignment 2 - Single Page app.
+
+## Overview assignement 2
+
+For assigment 2 I added extra features to the assigment 1 website. In this assigment I created api calls for actors and movies. This info is stored in MongoDB. I also did some test on the api calls. The movies that are stored for the first time in MongoDB are coming from the api from The Movie Database.
+
+### Features assignement 2
+
+- Actors api create/update/read/delete
+- Movies api create/update/read/delete
+- Front-end website get movies from MongoDB
+- Front-end website post movies from MongoDB
+- Front-end website delete movies from MongoDB
+- Unit tests on actors and movies
+- Super test on movies
+
+### What didn't work assignement 2
+I couldn't get the axios part completely working.
+Also the actors aren't used on the front-end but I can use all CRUD options with a program like postman or insomnia.
+
+## Images assigment 2
+
+![][mongodb]
+
+>> Shows my 2 database tables and some entries in the movies collection.
+
+![][insomnia]
+
+>> With insomnia I get the actors with an api call.
+
+![][unittest]
+
+>> Some of the unittest that are done on the api.
+
+
+
+
+[mongodb]: ./img/mongodb.png
+[insomnia]: ./img/insomnia.png
+[unittest]: ./img/unittest.png
