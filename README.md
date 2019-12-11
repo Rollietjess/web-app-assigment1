@@ -134,6 +134,6 @@ Also the actors aren't used on the front-end but I can use all CRUD options with
 
 
 
-[mongodb]: ./img/mongodb.png
-[insomnia]: ./img/insomnia.png
-[unittest]: ./img/unittest.png
+[mongodb]: ./img/mongodb.PNG
+[insomnia]: ./img/insomnia.PNG
+[unittest]: ./img/unittest.PNG
